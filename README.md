@@ -9,6 +9,7 @@ I apply them continuously and build signed APKs [here](https://github.com/va1ent
 Clone the fenix-mod repo and add upstream remote
 
 ```bash
+git clone https://github.com/va1entin/fenix-customizations.git
 git clone https://github.com/va1entin/fenix-mod.git
 cd fenix-mod
 git remote add upstream https://github.com/mozilla-mobile/fenix.git
