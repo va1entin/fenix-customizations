@@ -30,6 +30,6 @@ cp ../fenix-customizations/install-sdk.sh automation
 git apply ../fenix-customizations/application_id.patch ../fenix-customizations/app_name.patch ../fenix-customizations/amo-override.patch
 git add app automation .github
 git diff --staged
-
+git commit -m"patch and release $FORK_TAG_NAME"
 git push --set-upstream origin "$FORK_TAG_NAME"
 ```
