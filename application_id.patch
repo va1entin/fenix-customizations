@@ -1,0 +1,35 @@
+diff --git a/app/build.gradle b/app/build.gradle
+index e3370b4ad..90284588d 100644
+--- a/app/build.gradle
++++ b/app/build.gradle
+@@ -34,7 +34,7 @@ android {
+     }
+ 
+     defaultConfig {
+-        applicationId "org.mozilla"
++        applicationId "io.valh"
+         minSdkVersion Config.minSdkVersion
+         targetSdkVersion Config.targetSdkVersion
+         versionCode 1
+diff --git a/app/src/release/res/xml/shortcuts.xml b/app/src/release/res/xml/shortcuts.xml
+index 3c5234e63..420519d1a 100644
+--- a/app/src/release/res/xml/shortcuts.xml
++++ b/app/src/release/res/xml/shortcuts.xml
+@@ -11,7 +11,7 @@
+         android:shortcutLongLabel="@string/home_screen_shortcut_open_new_tab_2">
+         <intent
+             android:action="org.mozilla.fenix.OPEN_TAB"
+-            android:targetPackage="org.mozilla.firefox"
++            android:targetPackage="io.valh.firefox"
+             android:targetClass="org.mozilla.fenix.IntentReceiverActivity" />
+     </shortcut>
+     <shortcut
+@@ -22,7 +22,7 @@
+         android:shortcutLongLabel="@string/home_screen_shortcut_open_new_private_tab_2">
+         <intent
+             android:action="org.mozilla.fenix.OPEN_PRIVATE_TAB"
+-            android:targetPackage="org.mozilla.firefox"
++            android:targetPackage="io.valh.firefox"
+             android:targetClass="org.mozilla.fenix.IntentReceiverActivity" />
+     </shortcut>
+ </shortcuts>

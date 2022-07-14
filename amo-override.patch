@@ -1,0 +1,27 @@
+diff --git a/app/src/main/java/org/mozilla/fenix/components/Components.kt b/app/src/main/java/org/mozilla/fenix/components/Components.kt
+index 883571c33..603381062 100644
+--- a/app/src/main/java/org/mozilla/fenix/components/Components.kt
++++ b/app/src/main/java/org/mozilla/fenix/components/Components.kt
+@@ -104,7 +104,7 @@ class Components(private val context: Context) {
+ 
+     val addonCollectionProvider by lazyMonitored {
+         // Check if we have a customized (overridden) AMO collection (only supported in Nightly)
+-        if (Config.channel.isNightlyOrDebug && context.settings().amoCollectionOverrideConfigured()) {
++        if (context.settings().amoCollectionOverrideConfigured()) {
+             AddonCollectionProvider(
+                 context,
+                 core.client,
+diff --git a/app/src/main/java/org/mozilla/fenix/settings/SettingsFragment.kt b/app/src/main/java/org/mozilla/fenix/settings/SettingsFragment.kt
+index 297694889..abfa04d9a 100644
+--- a/app/src/main/java/org/mozilla/fenix/settings/SettingsFragment.kt
++++ b/app/src/main/java/org/mozilla/fenix/settings/SettingsFragment.kt
+@@ -578,9 +578,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
+             findPreference<Preference>(getPreferenceKey(R.string.pref_key_override_amo_collection))
+ 
+         val show = (
+-            Config.channel.isNightlyOrDebug && (
+                 settings.amoCollectionOverrideConfigured() || settings.showSecretDebugMenuThisSession
+-                )
+             )
+         preferenceAmoCollectionOverride?.apply {
+             isVisible = show
