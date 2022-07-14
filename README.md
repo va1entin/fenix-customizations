@@ -20,15 +20,15 @@ Set a (stable) tag you want to modify, add customizations and push to run workfl
 TAG_NAME="v101.1.0"
 FORK_TAG_NAME="$TAG_NAME-mod"
 
-git fetch upstream $TAG_NAME
-git checkout $TAG_NAME
+git fetch upstream "$TAG_NAME"
+git checkout "$TAG_NAME"
 git checkout -b "$TAG_NAME-mod"
 rm .github/workflows/*
 cp ../fenix-customizations/*.yml .github/workflows
 cp ../fenix-customizations/install-sdk.sh automation
-git apply ../fenix-customizations/application_id.patch ../fenix-customizations/app_name.patch ../fenix-customizations/amo-release-102.patch
+git apply ../fenix-customizations/application_id.patch ../fenix-customizations/app_name.patch ../fenix-customizations/amo-override.patch
 git add app automation .github
 git diff --staged
 
-git push --set-upstream origin $FORK_TAG_NAME
+git push --set-upstream origin "$FORK_TAG_NAME"
 ```
