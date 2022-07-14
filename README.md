@@ -2,6 +2,8 @@
 
 This repo contains patches and workflows to build stable [Fenix](https://github.com/mozilla-mobile/fenix/) (Firefox for Android) releases with the [add-on collection override feature](https://blog.mozilla.org/addons/2020/09/29/expanded-extension-support-in-firefox-for-android-nightly/) otherwise only present in unstable Nightly builds.
 
+I apply them continuously and build signed APKs [here](https://github.com/va1entin/fenix-mod).
+
 ## To make a modified release
 
 Clone the fenix-mod repo and add upstream remote
