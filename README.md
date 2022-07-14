@@ -6,7 +6,7 @@ I apply them continuously and build signed APKs [here](https://github.com/va1ent
 
 ## To make a modified release
 
-Clone the fenix-mod repo and add upstream remote
+Clone the fenix-customizations and fenix-mod repo and add upstream remote
 
 ```bash
 git clone https://github.com/va1entin/fenix-customizations.git
