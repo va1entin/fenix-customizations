@@ -21,7 +21,7 @@ Set a (stable) tag you want to modify, add customizations and push to run workfl
 TAG_NAME="v101.1.0"
 FORK_TAG_NAME="$TAG_NAME-mod"
 
-git fetch upstream "$TAG_NAME"
+git fetch upstream
 git checkout "$TAG_NAME"
 git checkout -b "$TAG_NAME-mod"
 rm .github/workflows/*
