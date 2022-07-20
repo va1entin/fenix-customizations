@@ -9,6 +9,7 @@ on:
   push:
     branches:
       - '1*'
+      - 'v1*'
 
 jobs:
   run-build:
