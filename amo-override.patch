@@ -7,7 +7,7 @@ index c17efab61..b41b0d809 100644
       * be enabled which is behind the Secret Settings.
       * */
 -    val customExtensionCollectionFeature = Config.channel.isNightlyOrDebug || Config.channel.isBeta
-+    val customExtensionCollectionFeature = Config.channel.isNightlyOrDebug || Config.channel.isBeta || Config.channel.isStable
++    val customExtensionCollectionFeature = true
  
      /**
       * Pull-to-refresh allows you to pull the web content down far enough to have the page to
